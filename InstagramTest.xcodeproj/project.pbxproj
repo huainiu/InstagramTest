@@ -17,7 +17,6 @@
 		F47A9FC517A1629B0035B327 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47A9FC417A1629B0035B327 /* Default@2x.png */; };
 		F47A9FC717A1629C0035B327 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47A9FC617A1629B0035B327 /* Default-568h@2x.png */; };
 		F47A9FCA17A1629C0035B327 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FC917A1629C0035B327 /* ViewController.m */; };
-		F47A9FCD17A1629C0035B327 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47A9FCB17A1629C0035B327 /* ViewController.xib */; };
 		F47A9FD617A165B40035B327 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FD517A165B40035B327 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F47A9FEC17A1660C0035B327 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FDA17A1660C0035B327 /* AFHTTPClient.m */; };
 		F47A9FED17A1660C0035B327 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FDC17A1660C0035B327 /* AFHTTPRequestOperation.m */; };
@@ -29,6 +28,9 @@
 		F47A9FF317A1660C0035B327 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FE917A1660C0035B327 /* AFXMLRequestOperation.m */; };
 		F47A9FF417A1660C0035B327 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FEB17A1660C0035B327 /* UIImageView+AFNetworking.m */; };
 		F47A9FF917A169F60035B327 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FF517A1698E0035B327 /* Security.framework */; };
+		F47A9FFB17A1AB580035B327 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FFA17A1AB580035B327 /* SystemConfiguration.framework */; };
+		F47A9FFD17A1AC010035B327 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FFC17A1AC010035B327 /* MobileCoreServices.framework */; };
+		F47AA00017A1AD4C0035B327 /* InstagramLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FFF17A1AD4B0035B327 /* InstagramLoginView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +49,6 @@
 		F47A9FC617A1629B0035B327 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F47A9FC817A1629C0035B327 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F47A9FC917A1629C0035B327 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F47A9FCC17A1629C0035B327 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		F47A9FD417A165B40035B327 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		F47A9FD517A165B40035B327 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		F47A9FD917A1660C0035B327 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -70,6 +71,10 @@
 		F47A9FEA17A1660C0035B327 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		F47A9FEB17A1660C0035B327 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		F47A9FF517A1698E0035B327 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F47A9FFA17A1AB580035B327 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F47A9FFC17A1AC010035B327 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F47A9FFE17A1AD4B0035B327 /* InstagramLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginView.h; sourceTree = "<group>"; };
+		F47A9FFF17A1AD4B0035B327 /* InstagramLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A9FFD17A1AC010035B327 /* MobileCoreServices.framework in Frameworks */,
+				F47A9FFB17A1AB580035B327 /* SystemConfiguration.framework in Frameworks */,
 				F47A9FF917A169F60035B327 /* Security.framework in Frameworks */,
 				F47A9FB117A1629B0035B327 /* UIKit.framework in Frameworks */,
 				F47A9FB317A1629B0035B327 /* Foundation.framework in Frameworks */,
@@ -107,6 +114,8 @@
 		F47A9FAF17A1629B0035B327 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F47A9FFC17A1AC010035B327 /* MobileCoreServices.framework */,
+				F47A9FFA17A1AB580035B327 /* SystemConfiguration.framework */,
 				F47A9FF517A1698E0035B327 /* Security.framework */,
 				F47A9FB017A1629B0035B327 /* UIKit.framework */,
 				F47A9FB217A1629B0035B327 /* Foundation.framework */,
@@ -124,7 +133,8 @@
 				F47A9FC017A1629B0035B327 /* AppDelegate.m */,
 				F47A9FC817A1629C0035B327 /* ViewController.h */,
 				F47A9FC917A1629C0035B327 /* ViewController.m */,
-				F47A9FCB17A1629C0035B327 /* ViewController.xib */,
+				F47A9FFE17A1AD4B0035B327 /* InstagramLoginView.h */,
+				F47A9FFF17A1AD4B0035B327 /* InstagramLoginView.m */,
 				F47A9FB717A1629B0035B327 /* Supporting Files */,
 			);
 			path = InstagramTest;
@@ -234,7 +244,6 @@
 				F47A9FC317A1629B0035B327 /* Default.png in Resources */,
 				F47A9FC517A1629B0035B327 /* Default@2x.png in Resources */,
 				F47A9FC717A1629C0035B327 /* Default-568h@2x.png in Resources */,
-				F47A9FCD17A1629C0035B327 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 				F47A9FF217A1660C0035B327 /* AFURLConnectionOperation.m in Sources */,
 				F47A9FF317A1660C0035B327 /* AFXMLRequestOperation.m in Sources */,
 				F47A9FF417A1660C0035B327 /* UIImageView+AFNetworking.m in Sources */,
+				F47AA00017A1AD4C0035B327 /* InstagramLoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +280,6 @@
 				F47A9FBA17A1629B0035B327 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F47A9FCB17A1629C0035B327 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F47A9FCC17A1629C0035B327 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

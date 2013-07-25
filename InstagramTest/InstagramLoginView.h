@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  InstagramLoginView.h
 //  InstagramTest
 //
 //  Created by Бондик Киричков on 25.07.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController <UIWebViewDelegate>
+@interface InstagramLoginView : UIWebView
 
 @end
