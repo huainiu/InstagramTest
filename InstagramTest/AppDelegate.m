@@ -16,8 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    self.viewController.view = [[UITableView alloc] init];
+    self.viewController = [[ViewController alloc] init];
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

@@ -31,6 +31,7 @@
 		F47A9FFB17A1AB580035B327 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FFA17A1AB580035B327 /* SystemConfiguration.framework */; };
 		F47A9FFD17A1AC010035B327 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FFC17A1AC010035B327 /* MobileCoreServices.framework */; };
 		F47AA00017A1AD4C0035B327 /* InstagramLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F47A9FFF17A1AD4B0035B327 /* InstagramLoginView.m */; };
+		F47AA00317A2FAC20035B327 /* InstagramUserFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F47AA00217A2FAC10035B327 /* InstagramUserFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		F47A9FFC17A1AC010035B327 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F47A9FFE17A1AD4B0035B327 /* InstagramLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginView.h; sourceTree = "<group>"; };
 		F47A9FFF17A1AD4B0035B327 /* InstagramLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginView.m; sourceTree = "<group>"; };
+		F47AA00117A2FAC10035B327 /* InstagramUserFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramUserFeed.h; sourceTree = "<group>"; };
+		F47AA00217A2FAC10035B327 /* InstagramUserFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramUserFeed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				F47A9FC917A1629C0035B327 /* ViewController.m */,
 				F47A9FFE17A1AD4B0035B327 /* InstagramLoginView.h */,
 				F47A9FFF17A1AD4B0035B327 /* InstagramLoginView.m */,
+				F47AA00117A2FAC10035B327 /* InstagramUserFeed.h */,
+				F47AA00217A2FAC10035B327 /* InstagramUserFeed.m */,
 				F47A9FB717A1629B0035B327 /* Supporting Files */,
 			);
 			path = InstagramTest;
@@ -268,6 +273,7 @@
 				F47A9FF317A1660C0035B327 /* AFXMLRequestOperation.m in Sources */,
 				F47A9FF417A1660C0035B327 /* UIImageView+AFNetworking.m in Sources */,
 				F47AA00017A1AD4C0035B327 /* InstagramLoginView.m in Sources */,
+				F47AA00317A2FAC20035B327 /* InstagramUserFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

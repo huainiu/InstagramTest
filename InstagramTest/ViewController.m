@@ -8,16 +8,41 @@
 
 #import "ViewController.h"
 #import "InstagramLoginView.h"
+#import "InstagramUserFeed.h"
 
 @interface ViewController ()
 
-@property (strong) NSString * accessTokenString;
+
+@property (strong) InstagramUserFeed * feed;
 
 -(void)showLoginScreen;
 
 @end
 
 @implementation ViewController
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+        UITableView * tempView = [[UITableView alloc] init];
+        self.tableView = tempView;
+        self.feed = [[InstagramUserFeed alloc] init];
+        tempView.dataSource = _feed;
+        
+        [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60)
+                                         target:self
+                                       selector:@selector(loop)
+                                       userInfo:nil
+                                        repeats:YES];
+    }
+    return self;
+}
+
+-(void)loop{
+    [self.tableView reloadData];
+}
 
 - (void)viewDidLoad
 {
@@ -29,7 +54,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
-    if (self.accessTokenString == nil) {
+    if (self.feed.accessToken == nil) {
         [self showLoginScreen];
     }
 }
@@ -53,9 +78,11 @@
     
     NSRange tokenLocation = [request.URL.absoluteString rangeOfString:@"#access_token"];
     if (tokenLocation.location!=NSNotFound) {
-        self.accessTokenString = [request.URL.absoluteString substringFromIndex:tokenLocation.location];
+        self.feed.accessToken = [request.URL.absoluteString substringFromIndex:(tokenLocation.location+1)];
         [webView stopLoading];
         [self dismissViewControllerAnimated:YES completion:nil];
+        
+        [self.feed requestFeed];
         return FALSE;
     }
     return YES;
