@@ -19,13 +19,26 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(void)runRequests {
+    
+    __weak id weakSelf = self;
+    //logout first
+    NSURLRequest * logoutRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://instagram.com/accounts/logout/"]];
+    AFHTTPRequestOperation * logoutOperation = [[AFHTTPRequestOperation alloc] initWithRequest:logoutRequest];
+    [logoutOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * operation, id response) {
+        
+        //login if logout was successful
+        NSURLRequest * loginPageRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://instagram.com/oauth/authorize/?client_id=906dd5e1f5574465a28f6d3f905f9981&redirect_uri=instatestapp://server.com/&response_type=token"]];
+        [weakSelf loadRequest:loginPageRequest];
+    }
+                                           failure:^(AFHTTPRequestOperation * operation, NSError * error) {
+                                               
+                                               NSLog(@"INSTA is unreachable");
+                                               
+                                           }];
+    
+    [logoutOperation start];
 }
-*/
+
 
 @end

@@ -10,4 +10,7 @@
 
 @interface InstagramLoginView : UIWebView
 
+
+-(void)runRequests;
+
 @end

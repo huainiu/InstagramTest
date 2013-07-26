@@ -11,6 +11,10 @@
 
 @interface ViewController ()
 
+@property (strong) NSString * accessTokenString;
+
+-(void)showLoginScreen;
+
 @end
 
 @implementation ViewController
@@ -25,25 +29,35 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
-    self.modalPresentationStyle = UIModalPresentationFullScreen;
+    if (self.accessTokenString == nil) {
+        [self showLoginScreen];
+    }
+}
+
+-(void)showLoginScreen {
     
+    //prepaire views
+    self.modalPresentationStyle = UIModalPresentationFullScreen;
     InstagramLoginView * loginView = [[InstagramLoginView alloc] init];
     UIViewController * loginController = [[UIViewController alloc] init];
     loginController.view = loginView;
-    
     loginView.delegate = self;
-    NSURLRequest * loginPageRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://instagram.com/oauth/authorize/?client_id=906dd5e1f5574465a28f6d3f905f9981&redirect_uri=instatestapp://server.com/&response_type=token"]];
-    [loginView loadRequest:loginPageRequest];
     loginController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    
-    
-    
     [self presentViewController:loginController animated:YES completion:nil];
+    
+    [loginView runRequests];
+
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-    NSLog(@"%@",request.URL.absoluteString);
+    NSRange tokenLocation = [request.URL.absoluteString rangeOfString:@"#access_token"];
+    if (tokenLocation.location!=NSNotFound) {
+        self.accessTokenString = [request.URL.absoluteString substringFromIndex:tokenLocation.location];
+        [webView stopLoading];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return FALSE;
+    }
     return YES;
 }
 
