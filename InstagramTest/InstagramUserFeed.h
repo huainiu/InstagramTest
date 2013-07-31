@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PullRefreshTableViewController.h"  
 
-@interface InstagramUserFeed : NSObject <UITableViewDataSource>
+@interface InstagramUserFeed : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong) NSString * accessToken;
--(void)requestFeed;
+@property (weak) PullRefreshTableViewController * display;
+
+-(void)refreshFeed;
+-(void)getOlderMedia;
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4603C7B17A7072900F81190 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4603C7A17A7072900F81190 /* QuartzCore.framework */; };
+		F4603C9017A7151000F81190 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4603C8D17A7151000F81190 /* arrow.png */; };
+		F4603C9117A7151000F81190 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4603C8F17A7151000F81190 /* PullRefreshTableViewController.m */; };
 		F47A9FB117A1629B0035B327 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FB017A1629B0035B327 /* UIKit.framework */; };
 		F47A9FB317A1629B0035B327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FB217A1629B0035B327 /* Foundation.framework */; };
 		F47A9FB517A1629B0035B327 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A9FB417A1629B0035B327 /* CoreGraphics.framework */; };
@@ -35,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4603C7A17A7072900F81190 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F4603C8D17A7151000F81190 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = ../../../../../Downloads/pulltoref/arrow.png; sourceTree = "<group>"; };
+		F4603C8E17A7151000F81190 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PullRefreshTableViewController.h; path = ../../../../../Downloads/pulltoref/PullRefreshTableViewController.h; sourceTree = "<group>"; };
+		F4603C8F17A7151000F81190 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullRefreshTableViewController.m; path = ../../../../../Downloads/pulltoref/PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		F47A9FAD17A1629B0035B327 /* InstagramTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47A9FB017A1629B0035B327 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F47A9FB217A1629B0035B327 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4603C7B17A7072900F81190 /* QuartzCore.framework in Frameworks */,
 				F47A9FFD17A1AC010035B327 /* MobileCoreServices.framework in Frameworks */,
 				F47A9FFB17A1AB580035B327 /* SystemConfiguration.framework in Frameworks */,
 				F47A9FF917A169F60035B327 /* Security.framework in Frameworks */,
@@ -97,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4603C8C17A714EC00F81190 /* Pull-Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				F4603C8D17A7151000F81190 /* arrow.png */,
+				F4603C8E17A7151000F81190 /* PullRefreshTableViewController.h */,
+				F4603C8F17A7151000F81190 /* PullRefreshTableViewController.m */,
+			);
+			name = "Pull-Refresh";
+			sourceTree = "<group>";
+		};
 		F47A9FA417A1629B0035B327 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +135,7 @@
 		F47A9FAF17A1629B0035B327 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4603C7A17A7072900F81190 /* QuartzCore.framework */,
 				F47A9FFC17A1AC010035B327 /* MobileCoreServices.framework */,
 				F47A9FFA17A1AB580035B327 /* SystemConfiguration.framework */,
 				F47A9FF517A1698E0035B327 /* Security.framework */,
@@ -130,6 +149,7 @@
 		F47A9FB617A1629B0035B327 /* InstagramTest */ = {
 			isa = PBXGroup;
 			children = (
+				F4603C8C17A714EC00F81190 /* Pull-Refresh */,
 				F47A9FD817A1660C0035B327 /* AFNetworking */,
 				F47A9FD317A1658F0035B327 /* JSONKit */,
 				F47A9FBF17A1629B0035B327 /* AppDelegate.h */,
@@ -249,6 +269,7 @@
 				F47A9FC317A1629B0035B327 /* Default.png in Resources */,
 				F47A9FC517A1629B0035B327 /* Default@2x.png in Resources */,
 				F47A9FC717A1629C0035B327 /* Default-568h@2x.png in Resources */,
+				F4603C9017A7151000F81190 /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +295,7 @@
 				F47A9FF417A1660C0035B327 /* UIImageView+AFNetworking.m in Sources */,
 				F47AA00017A1AD4C0035B327 /* InstagramLoginView.m in Sources */,
 				F47AA00317A2FAC20035B327 /* InstagramUserFeed.m in Sources */,
+				F4603C9117A7151000F81190 /* PullRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +338,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -340,7 +362,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -354,7 +376,17 @@
 				GCC_PREFIX_HEADER = "InstagramTest/InstagramTest-Prefix.pch";
 				INFOPLIST_FILE = "InstagramTest/InstagramTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CKRefreshControl-ghclxinvzicgjccavvspxcmcngyi/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos5.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -366,7 +398,18 @@
 				GCC_PREFIX_HEADER = "InstagramTest/InstagramTest-Prefix.pch";
 				INFOPLIST_FILE = "InstagramTest/InstagramTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CKRefreshControl-ghclxinvzicgjccavvspxcmcngyi/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos5.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -390,6 +433,7 @@
 				F47A9FD217A1629C0035B327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

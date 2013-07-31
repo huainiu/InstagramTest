@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface ViewController : UITableViewController <UIWebViewDelegate>
+@interface ViewController : PullRefreshTableViewController <UIWebViewDelegate>
 
 @end
