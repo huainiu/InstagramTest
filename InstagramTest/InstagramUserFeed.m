@@ -111,7 +111,18 @@
         
         NSString * imageThumbURL = [[[mediaDict objectForKey:@"images"] objectForKey:@"thumbnail"] objectForKey:@"url"];
         
-        [tempCell.imageView setImageWithURL:[NSURL URLWithString:imageThumbURL]];
+        __weak UITableViewCell * weakCell = tempCell;
+        
+        [tempCell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageThumbURL]]
+                                  placeholderImage:nil
+                                           success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                               
+                                               weakCell.imageView.image=image;
+                                               [weakCell setNeedsLayout];
+                                           }
+                                           failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                               
+                                           }];
     }
     return tempCell;
 }
